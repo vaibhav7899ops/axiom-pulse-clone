@@ -1,13 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import uiReducer from "./slices/ui-slice";
-import tableReducer from "./slices/table-slice";
+// store/index.ts
+import { configureStore } from '@reduxjs/toolkit';
+import ui from './slices/ui-slice';
+import table from './slices/table-slice';
 
 export const store = configureStore({
-  reducer: {
-    ui: uiReducer,
-    table: tableReducer,
-  },
-  devTools: process.env.NODE_ENV !== "production"
+  reducer: { ui, table },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
