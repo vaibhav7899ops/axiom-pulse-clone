@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { @apply bg-bg text-ink min-h-full; }
+* { scrollbar-width: thin; }
+
+.card { @apply bg-panel/80 rounded-2xl shadow-soft border border-white/5; }
+.chip { @apply text-xs rounded-full px-2 py-0.5 bg-white/5 border border-white/10; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10; }
+.link { @apply text-accent hover:underline; }
+
+/* price flash */
+.flash-up { background: linear-gradient(90deg, rgba(52,211,153,.15), transparent); transition: background 800ms ease; }
+.flash-down { background: linear-gradient(90deg, rgba(248,113,113,.15), transparent); transition: background 800ms ease; }
+
+/* skeleton */
+.skeleton { @apply relative overflow-hidden bg-white/5; }
+.skeleton::after {
+  content: "";
+  @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+/* Avoid CLS: fixed column widths */
+.col-symbol { width: 120px; }
+.col-price { width: 120px; }
+.col-change { width: 110px; }
+.col-volume { width: 140px; }
+.col-liq { width: 120px; }
+.col-mcap { width: 140px; }
+.col-age { width: 100px; }
+
+@media (max-width: 640px) {
+  .col-volume, .col-liq, .col-mcap { display: none; }
+}
