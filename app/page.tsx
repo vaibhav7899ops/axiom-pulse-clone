@@ -1,11 +1,8 @@
-import TokenTable from "@/components/table/token-table";
-import HeaderBar from "@/components/ui/header-bar";
-
-export default async function Page() {
+export default function Page() {
   return (
-    <main className="space-y-4">
-      <HeaderBar />
-      <TokenTable />
+    <main style={{ maxWidth: 960, margin: '40px auto', fontFamily: 'system-ui, sans-serif' }}>
+      <h1 style={{ fontSize: 24, fontWeight: 600 }}>Axiom Pulse — Build Check</h1>
+      <p>Minimal page rendered. If you can see this on Vercel, build is green ✅</p>
     </main>
   );
 }
