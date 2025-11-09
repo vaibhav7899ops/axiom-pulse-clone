@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Axiom Pulse Clone',
-  description: 'Token discovery table',
+  description: 'Token discovery table'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
