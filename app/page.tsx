@@ -1,8 +1,10 @@
+import TokenTable from '@/components/table/token-table';
+
 export default function Page() {
   return (
-    <main style={{ maxWidth: 960, margin: '40px auto', fontFamily: 'system-ui, sans-serif' }}>
-      <h1 style={{ fontSize: 24, fontWeight: 600 }}>Axiom Pulse — Build Check</h1>
-      <p>Minimal page rendered. If you can see this on Vercel, build is green ✅</p>
+    <main className="mx-auto max-w-7xl p-4 space-y-4">
+      <h1 className="text-xl font-semibold">Axiom Pulse — Tokens</h1>
+      <TokenTable />
     </main>
   );
 }
