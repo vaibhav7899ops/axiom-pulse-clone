@@ -15,9 +15,9 @@ export default function Providers({ children }: Props) {
           queries: {
             refetchOnWindowFocus: false,
             retry: 1,
-            staleTime: 30_000,
-          },
-        },
+            staleTime: 30_000
+          }
+        }
       })
   );
 
