@@ -8,7 +8,6 @@ import { store } from '@/store';
 type Props = { children: React.ReactNode };
 
 export default function Providers({ children }: Props) {
-  // Create QueryClient once per app mount
   const [queryClient] = React.useState(
     () =>
       new QueryClient({
@@ -24,9 +23,7 @@ export default function Providers({ children }: Props) {
 
   return (
     <ReduxProvider store={store}>
-      <QueryClientProvider client={queryClient}>
-        {children}
-      </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </ReduxProvider>
   );
 }
